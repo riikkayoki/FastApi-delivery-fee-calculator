@@ -17,9 +17,7 @@ class DeliveryFeeRequest(BaseModel):
 
 
 @app.exception_handler(RequestValidationError)
-async def validation_exception_handler(
-    request: DeliveryFeeRequest, exc: Any
-) -> JSONResponse:
+async def validation_exception_handler(request: DeliveryFeeRequest, exc: Any) -> Any:
     message = "You inserted invalid type of data on the fields."
     return JSONResponse(
         content={"msg": message}, status_code=status.HTTP_422_UNPROCESSABLE_ENTITY

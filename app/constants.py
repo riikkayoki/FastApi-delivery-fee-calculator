@@ -9,7 +9,6 @@ class Constants:
     EXTRA_ITEM_FEE = 50
     BULK_FEE = 120
     FREE_DELIVERY_CART_VALUE = 10000
-    RUSH_DAY = 4
-    RUSH_START = 15
-    RUSH_END = 19
+    RUSH_HOURS = {4: range(15, 19)}
     RUSH_MULTIPLIER_FEE = 1.2
+    ITEMS_BEFORE_BULK_FEE = 12
